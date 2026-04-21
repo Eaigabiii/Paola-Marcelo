@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Estrutura Patrimonial — Paola & Marcelo · Max Carneiros Exclusive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --coal:#1A1918;--graphite:#2D2B29;--smoke:#4A4845;
+  --warm:#F5F1EB;--cream:#EDE8E0;--ivory:#FAF8F4;
+  --gold:#C5A055;--gold-lt:#D4B574;--champagne:#E8D5A3;
+  --teal:#1B4F5E;--teal-lt:#2A6B7C;--sage:#5C7A6E;
+  --stone:#8C8680;--line:rgba(197,160,85,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;font-weight:300;background:var(--ivory);color:var(--graphite);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;object-fit:cover}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 3rem;background:rgba(26,25,24,.55);backdrop-filter:blur(12px);border-bottom:1px solid rgba(197,160,85,.06);transition:background .4s,border-color .4s,box-shadow .4s}
+#nav.scrolled{background:rgba(26,25,24,.96);border-color:rgba(197,160,85,.14);box-shadow:0 1px 0 rgba(0,0,0,.3)}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:1.05rem;color:var(--warm);letter-spacing:.06em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:rgba(245,241,235,.45);transition:color .25s;text-decoration:none}
+.nav-links a:hover{color:var(--gold-lt)}
+
+/* HERO */
+#hero{min-height:100vh;background:var(--coal);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 75% 50%,rgba(27,79,94,.4),transparent 65%),radial-gradient(ellipse 40% 60% at 15% 80%,rgba(92,122,110,.12),transparent),linear-gradient(140deg,#1A1918,#222120)}
+.hero-grain{position:absolute;inset:0;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.5}
+.hero-vline{position:absolute;top:0;bottom:0;left:55%;width:1px;background:linear-gradient(180deg,transparent,rgba(197,160,85,.2) 25%,rgba(197,160,85,.2) 75%,transparent)}
+.hero-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 3rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;width:100%}
+.hero-tag{display:inline-flex;align-items:center;gap:.7rem;padding:.4rem 1.1rem;margin-bottom:2rem;border:1px solid rgba(197,160,85,.28);border-radius:100px}
+.hero-pulse{width:5px;height:5px;border-radius:50%;background:var(--gold);animation:pdot 2s infinite}
+@keyframes pdot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+.hero-tag-text{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt)}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.6rem,4.5vw,4.4rem);line-height:1.07;color:var(--warm);margin-bottom:1.5rem}
+.hero-h1 em{font-style:italic;color:var(--gold-lt)}
+.hero-sub{font-size:.97rem;line-height:1.72;color:rgba(245,241,235,.55);max-width:420px;margin-bottom:2.8rem}
+.btn-ghost{display:inline-flex;align-items:center;gap:.8rem;padding:.85rem 1.9rem;border:1px solid rgba(197,160,85,.45);color:var(--gold-lt);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;transition:all .3s;cursor:pointer;text-decoration:none}
+.btn-ghost:hover{background:rgba(197,160,85,.1);border-color:var(--gold)}
+.btn-ghost svg{transition:transform .3s}
+.btn-ghost:hover svg{transform:translateX(4px)}
+.hero-stats{display:flex;flex-direction:column;gap:1.2rem}
+.hstat{background:rgba(255,255,255,.042);border:1px solid rgba(197,160,85,.13);padding:1.5rem 1.8rem;position:relative;overflow:hidden}
+.hstat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,var(--gold),transparent)}
+.hstat-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--warm);line-height:1}
+.hstat-n small{font-size:1.2rem;color:var(--gold)}
+.hstat-l{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--stone);margin-top:.25rem}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(245,241,235,.2);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+.scroll-ln{width:1px;height:44px;background:linear-gradient(180deg,rgba(197,160,85,.45),transparent);animation:sln 2s ease-in-out infinite}
+@keyframes sln{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* LAYOUTS */
+.sec{padding:6rem 3rem;max-width:1200px;margin:0 auto}
+.sec-dark{padding:6rem 0;background:var(--coal)}
+.sec-dark .inner{max-width:1200px;margin:0 auto;padding:0 3rem}
+.sec-cream{padding:6rem 0;background:var(--cream)}
+.sec-cream .inner{max-width:1200px;margin:0 auto;padding:0 3rem}
+.eyebrow{display:flex;align-items:center;gap:1rem;margin-bottom:.9rem}
+.eyebrow::after{content:'';flex:1;max-width:50px;height:1px;background:var(--gold)}
+.lbl{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.9rem,3.5vw,3rem);line-height:1.15;color:var(--coal);margin-bottom:1rem}
+.h2 em{font-style:italic;color:var(--teal)}
+.h2-lt{color:var(--warm)}
+.h2-lt em{color:var(--gold-lt)}
+.lead{font-size:.97rem;line-height:1.78;color:var(--smoke);max-width:600px}
+.lead-lt{color:rgba(245,241,235,.58)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.22;margin:0 3rem}
+
+/* §2 CONTEXTO */
+.ctx-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;align-items:start}
+.ctx-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.8rem}
+.ctx-chip{padding:.32rem .95rem;border:1px solid var(--line);border-radius:100px;font-size:.78rem;color:var(--smoke)}
+.ctx-chip strong{color:var(--coal);font-weight:500}
+.ctx-table{background:var(--cream);padding:2rem;border-left:2px solid var(--gold)}
+.ctx-table-t{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+.ctx-row{display:flex;justify-content:space-between;align-items:baseline;padding:.65rem 0;border-bottom:1px solid var(--line)}
+.ctx-row:last-child{border-bottom:none}
+.ctx-rl{font-size:.82rem;color:var(--smoke)}
+.ctx-rv{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--coal)}
+.pain-bar{display:grid;grid-template-columns:auto 1fr;gap:1.1rem;align-items:start;padding:1.5rem;background:var(--ivory);border-left:3px solid var(--gold);margin-top:1.6rem}
+.pain-ico{color:var(--gold);flex-shrink:0;margin-top:.1rem}
+.pain-t strong{display:block;font-weight:500;color:var(--coal);margin-bottom:.3rem;font-size:.93rem}
+.pain-t p{font-size:.85rem;color:var(--smoke);line-height:1.62}
+
+/* §3 RACIONAL */
+.rat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:3rem;background:var(--line)}
+.rat-card{background:var(--ivory);padding:2rem;transition:background .25s}
+.rat-card:hover{background:var(--cream)}
+.rat-n{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--champagne);line-height:1;margin-bottom:.5rem}
+.rat-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--coal);margin-bottom:.5rem}
+.rat-body{font-size:.84rem;line-height:1.66;color:var(--smoke)}
+
+/* GALLERY */
+.gallery-hero{width:100%;height:480px;overflow:hidden}
+.gallery-hero img{width:100%;height:100%;object-fit:cover;transition:transform 6s ease}
+.gallery-hero:hover img{transform:scale(1.04)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:230px 230px;gap:3px}
+.gallery-grid .g0{grid-column:1/3}
+.gallery-grid .g1,.gallery-grid .g2{grid-column:span 1}
+.gallery-grid .g3,.gallery-grid .g4{grid-column:span 1}
+.gallery-grid .g5{grid-column:3/5}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:opacity .3s;display:block}
+.gallery-grid img:hover{opacity:.87}
+
+/* §4 PROP INFO */
+.prop-meta{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:3rem}
+.pmeta-l{padding-right:3rem;border-right:1px solid var(--line)}
+.pmeta-r{padding-left:3rem}
+.prop-specs{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem;margin:1.6rem 0}
+.pspec{border-bottom:1px solid var(--line);padding-bottom:.8rem}
+.pspec-l{font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone);margin-bottom:.2rem}
+.pspec-v{font-family:'Cormorant Garamond',serif;font-size:1.12rem;color:var(--coal)}
+.atags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.atag{padding:.27rem .82rem;background:var(--ivory);border:1px solid var(--line);font-size:.7rem;color:var(--smoke);border-radius:100px}
+.loc-rows{margin-top:1.4rem}
+.loc-row{display:flex;align-items:center;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line)}
+.loc-row:last-child{border-bottom:none}
+.loc-d{min-width:56px;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--teal)}
+.loc-n{font-size:.84rem;color:var(--smoke)}
+.prop-note{padding:1.3rem 1.5rem;background:var(--ivory);border-left:2px solid var(--sage);margin-top:1.8rem}
+.prop-note p{font-size:.81rem;color:var(--smoke);line-height:1.62}
+
+/* §5 UNIDADE */
+.unit-card{border:1px solid rgba(197,160,85,.2);display:grid;grid-template-columns:1fr 1.5fr;margin-top:2.8rem}
+.ucl{background:rgba(197,160,85,.06);padding:2.6rem 2.3rem;border-right:1px solid rgba(197,160,85,.14);display:flex;flex-direction:column;justify-content:space-between}
+.u-badge{display:inline-block;padding:.27rem .85rem;margin-bottom:.8rem;background:rgba(197,160,85,.14);border:1px solid rgba(197,160,85,.28);color:var(--gold-lt);font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;border-radius:100px}
+.u-name{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--warm);line-height:1}
+.u-desc{font-size:.84rem;color:rgba(245,241,235,.42);margin-top:.2rem}
+.u-area{display:flex;align-items:baseline;gap:.25rem;margin-top:1.8rem}
+.u-area-n{font-family:'Cormorant Garamond',serif;font-size:3.8rem;font-weight:300;color:var(--gold);line-height:1}
+.u-area-t{font-size:.85rem;color:rgba(245,241,235,.33)}
+.ucr{padding:2.3rem 2.6rem}
+.flow-lbl{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.flow-step{display:grid;grid-template-columns:auto 1fr auto;gap:1.1rem;align-items:center;padding:1rem 0;border-bottom:1px solid rgba(197,160,85,.1)}
+.flow-step:last-child{border-bottom:none}
+.fnum{width:25px;height:25px;border-radius:50%;border:1px solid rgba(197,160,85,.28);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--gold);flex-shrink:0}
+.flbl{font-size:.82rem;color:rgba(245,241,235,.5)}
+.fsub{font-size:.68rem;color:rgba(245,241,235,.26);margin-top:.08rem}
+.fval{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--warm);text-align:right;white-space:nowrap}
+.fval.hl{color:var(--gold-lt)}
+.unit-total{margin-top:1.3rem;padding:1.2rem 1.7rem;background:rgba(197,160,85,.08);border:1px solid rgba(197,160,85,.2);display:flex;justify-content:space-between;align-items:center}
+.ut-l{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--stone)}
+.ut-s{font-size:.68rem;color:rgba(245,241,235,.22);margin-top:.12rem}
+.ut-v{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:300;color:var(--gold-lt)}
+.cons-box{margin-top:1.7rem;padding:1.5rem;border:1px solid rgba(197,160,85,.14);background:rgba(197,160,85,.04)}
+.cons-t{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+.cons-vals{display:grid;grid-template-columns:1fr 1fr;gap:1.3rem}
+.cons-val-l{font-size:.68rem;color:rgba(245,241,235,.33);margin-bottom:.18rem}
+.cons-val-n{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--warm)}
+.cons-note{font-size:.77rem;color:rgba(245,241,235,.36);margin-top:.85rem;line-height:1.57}
+
+/* §6 ENGINE */
+.eng-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;align-items:start}
+.eng-diagram{background:rgba(255,255,255,.03);border:1px solid rgba(197,160,85,.11);padding:2.6rem}
+.eng-dt{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem}
+.eng-block{display:grid;grid-template-columns:3px 1fr;gap:1.2rem;padding:1.1rem 0;border-bottom:1px solid rgba(197,160,85,.09)}
+.eng-block:last-child{border-bottom:none}
+.eng-line{border-radius:2px}
+.eng-bl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,241,235,.28);margin-bottom:.22rem}
+.eng-bt{font-family:'Cormorant Garamond',serif;font-size:1.08rem;color:var(--warm);margin-bottom:.22rem}
+.eng-bn{font-size:.79rem;color:rgba(245,241,235,.4);line-height:1.53}
+.eng-pts{}
+.eng-pt{padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.eng-pt:last-child{border-bottom:none}
+.eng-pt-t{font-weight:500;color:var(--coal);font-size:.9rem;margin-bottom:.35rem}
+.eng-pt-b{font-size:.85rem;line-height:1.7;color:var(--smoke)}
+
+/* §7 COMPARE */
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:3rem}
+.cmp-card{padding:2.3rem}
+.cmp-neg{background:#F2EDE6;border:1px solid rgba(0,0,0,.05)}
+.cmp-pos{background:var(--coal);border:1px solid rgba(197,160,85,.18)}
+.cmp-badge{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:.55rem}
+.cmp-dot{width:6px;height:6px;border-radius:50%}
+.cmp-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;margin-bottom:1.1rem}
+.cmp-neg .cmp-title{color:var(--coal)}
+.cmp-pos .cmp-title{color:var(--warm)}
+.cmp-row{display:flex;align-items:flex-start;gap:.85rem;padding:.75rem 0;border-bottom:1px solid var(--line)}
+.cmp-row:last-child{border-bottom:none}
+.cmp-ico{flex-shrink:0;margin-top:.1rem}
+.cmp-txt{font-size:.84rem;line-height:1.6}
+.cmp-neg .cmp-txt{color:var(--smoke)}
+.cmp-pos .cmp-txt{color:rgba(245,241,235,.58)}
+.bar-sec{margin-top:2.8rem}
+.bar-row{display:grid;grid-template-columns:150px 1fr 120px;gap:1.1rem;align-items:center;margin-bottom:1.1rem}
+.bar-lbl{font-size:.78rem;color:var(--smoke);text-align:right}
+.bar-track{background:rgba(0,0,0,.07);border-radius:2px;height:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;width:0;transition:width 1.4s ease}
+.bfgold{background:linear-gradient(90deg,var(--gold),var(--gold-lt))}
+.bfteal{background:linear-gradient(90deg,var(--teal),var(--teal-lt))}
+.bfstone{background:var(--stone)}
+.bar-val{font-family:'Cormorant Garamond',serif;font-size:.93rem;color:var(--coal)}
+
+/* CLOSING */
+.closing{background:var(--coal);padding:7rem 3rem;text-align:center;position:relative;overflow:hidden}
+.closing-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 50%,rgba(27,79,94,.28),transparent)}
+.closing-inner{position:relative;z-index:2;max-width:700px;margin:0 auto}
+.closing-orn{width:42px;height:1px;background:var(--gold);margin:0 auto 2rem}
+.closing-h{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:300;color:var(--warm);line-height:1.1;margin-bottom:1.5rem}
+.closing-h em{font-style:italic;color:var(--gold-lt)}
+.closing-body{font-size:.95rem;line-height:1.8;color:rgba(245,241,235,.53);margin-bottom:2.8rem}
+.closing-pills{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:2.8rem}
+.cpill{padding:1.5rem 1.1rem;border:1px solid rgba(197,160,85,.13)}
+.cpill-ico{color:var(--gold);margin-bottom:.65rem}
+.cpill-t{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--warm);margin-bottom:.28rem}
+.cpill-b{font-size:.8rem;color:rgba(245,241,235,.48);line-height:1.5}
+.closing-box{padding:1.7rem 2rem;border:1px solid rgba(197,160,85,.14);display:inline-block;text-align:left;max-width:500px}
+.closing-box-t{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.closing-box-c{font-family:'Cormorant Garamond',serif;font-size:.95rem;color:var(--warm);line-height:1.75}
+.closing-box-c em{color:var(--gold-lt)}
+
+footer{background:#111110;padding:2rem 3rem;text-align:center}
+footer p{font-size:.7rem;color:rgba(245,241,235,.22);line-height:1.7;max-width:680px;margin:0 auto}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .62s ease,transform .62s ease}
+.rv.on{opacity:1;transform:none}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  #nav{padding:1rem 1.5rem} .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:2rem} .hero-vline{display:none} .hero-stats{display:none}
+  .sec{padding:4rem 1.5rem}
+  .sec-dark .inner,.sec-cream .inner{padding:4rem 1.5rem}
+  .sec-dark,.sec-cream{padding:4rem 0}
+  .ctx-grid,.prop-meta,.unit-card,.eng-grid,.cmp-grid{grid-template-columns:1fr}
+  .pmeta-l{border-right:none;border-bottom:1px solid var(--line);padding-right:0;padding-bottom:2.5rem}
+  .pmeta-r{padding-left:0;padding-top:2.5rem}
+  .ucl{border-right:none;border-bottom:1px solid rgba(197,160,85,.14)}
+  .ucr{padding:2rem 1.5rem}
+  .rat-grid{grid-template-columns:1fr 1fr}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .gallery-grid [class^=g]{grid-column:auto;grid-row:auto}
+  .gallery-grid img{height:200px}
+  .closing-pills{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:100px 1fr 90px}
+}
+@media(max-width:640px){
+  .rat-grid,.prop-specs{grid-template-columns:1fr}
+  .hero-h1{font-size:2.4rem}
+  .gallery-grid img{height:160px}
+  .gallery-hero{height:240px}
+}
+
+/* ── RENTABILIDADE ── */
+.rent-capex{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(197,160,85,.12);margin-top:2.8rem}
+.capex-card{background:var(--coal);padding:2.2rem 2.4rem}
+.capex-badge{display:inline-block;padding:.25rem .85rem;margin-bottom:1.2rem;border-radius:100px;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase}
+.capex-badge.mid{background:rgba(92,122,110,.2);color:var(--sage-lt,#7A9E90);border:1px solid rgba(92,122,110,.3)}
+.capex-badge.hi{background:rgba(197,160,85,.15);color:var(--gold-lt);border:1px solid rgba(197,160,85,.3)}
+.capex-title{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--warm);margin-bottom:1.2rem}
+.capex-rows{}
+.capex-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid rgba(197,160,85,.09);font-size:.83rem}
+.capex-row:last-child{border-bottom:none}
+.capex-row-l{color:rgba(245,241,235,.5)}
+.capex-row-v{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--warm)}
+.capex-total-row{display:flex;justify-content:space-between;align-items:baseline;padding:.8rem 0 0;margin-top:.5rem;border-top:1px solid rgba(197,160,85,.25)}
+.capex-total-l{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold)}
+.capex-total-v{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold-lt)}
+
+.opex-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(197,160,85,.1);margin-top:2px}
+.opex-item{background:rgba(255,255,255,.025);padding:1.4rem 1.2rem;text-align:center}
+.opex-item-ico{color:var(--teal-lt);margin-bottom:.5rem}
+.opex-item-l{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,235,.35);margin-bottom:.25rem}
+.opex-item-v{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--warm)}
+.opex-total{background:rgba(197,160,85,.07);border:1px solid rgba(197,160,85,.18);padding:1.2rem 2rem;margin-top:2px;display:flex;justify-content:space-between;align-items:center}
+.opex-total-l{font-size:.67rem;letter-spacing:.14em;text-transform:uppercase;color:var(--stone)}
+.opex-total-v{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--warm)}
+
+.rent-scenarios{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(197,160,85,.1);margin-top:3rem}
+.scen-card{padding:2.4rem}
+.scen-base{background:rgba(27,79,94,.35)}
+.scen-premium{background:rgba(27,79,94,.6)}
+.scen-badge{display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.4rem}
+.scen-dot{width:7px;height:7px;border-radius:50%}
+.scen-badge-txt{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,241,235,.55)}
+.scen-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:var(--warm);margin-bottom:.3rem}
+.scen-sub{font-size:.78rem;color:rgba(245,241,235,.42);margin-bottom:1.6rem}
+.scen-rows{display:flex;flex-direction:column;gap:0}
+.scen-row{display:flex;justify-content:space-between;align-items:baseline;padding:.6rem 0;border-bottom:1px solid rgba(197,160,85,.1)}
+.scen-row:last-child{border-bottom:none}
+.scen-row-l{font-size:.8rem;color:rgba(245,241,235,.48)}
+.scen-row-v{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--warm)}
+.scen-row-v.hl{color:var(--gold-lt)}
+.scen-caprate{margin-top:1.4rem;padding:1rem 1.4rem;background:rgba(197,160,85,.12);border-left:2px solid var(--gold)}
+.scen-caprate-l{font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
+.scen-caprate-v{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold-lt)}
+
+.valorizacao-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
+.valorizacao-chart{background:rgba(255,255,255,.025);border:1px solid rgba(197,160,85,.1);padding:2rem}
+.val-chart-title{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.val-chart-svg{width:100%;overflow:visible}
+.val-legend{display:flex;gap:1.5rem;margin-top:1rem}
+.val-legend-item{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:rgba(245,241,235,.5)}
+.val-legend-line{width:20px;height:2px;border-radius:1px}
+
+.patrimonio-cards{display:flex;flex-direction:column;gap:1.2rem}
+.pat-card{padding:1.8rem 2rem;border:1px solid rgba(197,160,85,.15)}
+.pat-card.conserv{background:rgba(92,122,110,.12)}
+.pat-card.otimista{background:rgba(197,160,85,.08)}
+.pat-card-badge{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.7rem}
+.conserv .pat-card-badge{color:var(--sage)}
+.otimista .pat-card-badge{color:var(--gold)}
+.pat-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--warm);margin-bottom:1rem}
+.pat-breakdown{font-size:.8rem;color:rgba(245,241,235,.42);line-height:1.8;margin-bottom:.8rem}
+.pat-total-line{display:flex;justify-content:space-between;align-items:baseline;padding-top:.7rem;border-top:1px solid rgba(197,160,85,.18)}
+.pat-total-l{font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--stone)}
+.pat-total-v{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--gold-lt)}
+.pat-note{margin-top:1.5rem;padding:1rem 1.4rem;background:rgba(197,160,85,.06);border-left:2px solid rgba(197,160,85,.3)}
+.pat-note p{font-size:.78rem;color:rgba(245,241,235,.4);line-height:1.6}
+
+@media(max-width:1024px){
+  .rent-capex,.rent-scenarios,.valorizacao-grid{grid-template-columns:1fr}
+  .opex-strip{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:640px){
+  .opex-strip{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">Max <span>Carneiros</span> · Planejamento Patrimonial</div>
+  <ul class="nav-links">
+    <li><a href="#contexto">Contexto</a></li>
+    <li><a href="#racional">Racional</a></li>
+    <li><a href="#empreendimento">Empreendimento</a></li>
+    <li><a href="#unidade">Unidade</a></li>
+    <li><a href="#rentabilidade">Rentabilidade</a></li>
+    <li><a href="#estrutura">Estrutura</a></li>
+    <li><a href="#encerramento">Conclusão</a></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-bg"></div><div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag rv"><span class="hero-pulse"></span><span class="hero-tag-text">Proposta Exclusiva · Paola &amp; Marcelo</span></div>
+      <h1 class="hero-h1 rv d1">Uma estrutura patrimonial <em>inteligente</em> entre liquidez, posicionamento imobiliário e visão de longo prazo.</h1>
+      <p class="hero-sub rv d2">Max Carneiros Exclusive · Praia dos Carneiros, Tamandaré–PE<br/>Aquisição na planta com consórcio como instrumento de composição, preservando capital produtivo em CDI.</p>
+      <a href="#contexto" class="btn-ghost rv d3">Ver a proposta <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat rv d1"><div class="hstat-n">R$ 584.<small>900</small></div><div class="hstat-l">Valor total · Unidade A010</div></div>
+      <div class="hstat rv d2"><div class="hstat-n">33<small>,61 m²</small></div><div class="hstat-l">Área privativa · piscina própria</div></div>
+      <div class="hstat rv d3"><div class="hstat-n">~12<small>% a.a.</small></div><div class="hstat-l">Cap rate indicativo · cenário base</div></div>
+      <div class="hstat rv d4"><div class="hstat-n">R$ 1.<small>582,50</small></div><div class="hstat-l">Parcela mensal do consórcio</div></div>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-ln"></div><span>Rolar</span></div>
+</section>
+
+<!-- ══ §2 CONTEXTO ══ -->
+<section id="contexto" class="sec">
+  <div class="eyebrow rv"><span class="lbl">01 · Diagnóstico Patrimonial</span></div>
+  <h2 class="h2 rv">Paola &amp; Marcelo — <em>o perfil que define a estratégia.</em></h2>
+  <div class="ctx-grid">
+    <div>
+      <div class="ctx-chips rv">
+        <span class="ctx-chip"><strong>Austrália</strong> · 3 anos</span>
+        <span class="ctx-chip">Sem permanência definitiva</span>
+        <span class="ctx-chip">Não pretendem retornar ao BR</span>
+        <span class="ctx-chip"><strong>2 filhos</strong> · 9 e 5 anos</span>
+        <span class="ctx-chip">Naturais do RS</span>
+        <span class="ctx-chip"><strong>Geólogos</strong></span>
+        <span class="ctx-chip">43 e 50 anos</span>
+        <span class="ctx-chip">Saída definitiva</span>
+        <span class="ctx-chip">Planejamento <strong>híbrido</strong></span>
+        <span class="ctx-chip">SP · Nordeste · SC</span>
+      </div>
+      <div class="pain-bar rv d1">
+        <div class="pain-ico"><svg width="19" height="19" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg></div>
+        <div class="pain-t"><strong>Dor central: não conseguem investir na Austrália.</strong><p>Barreiras regulatórias para residentes sem permanência definitiva. O Brasil é o mercado que conhecem — e onde já têm ativos. A proposta parte exatamente desse ponto.</p></div>
+      </div>
+    </div>
+    <div class="ctx-table rv d1">
+      <div class="ctx-table-t">Base patrimonial atual</div>
+      <div class="ctx-row"><span class="ctx-rl">Imóvel no Brasil</span><span class="ctx-rv">~R$ 1.000.000</span></div>
+      <div class="ctx-row"><span class="ctx-rl">Renda mensal do imóvel</span><span class="ctx-rv">R$ 4.500/mês</span></div>
+      <div class="ctx-row"><span class="ctx-rl">Capital financeiro</span><span class="ctx-rv">~R$ 400.000</span></div>
+      <div class="ctx-row"><span class="ctx-rl">Rentabilidade do capital</span><span class="ctx-rv">~11% a.a. (CDI)</span></div>
+      <div class="ctx-row"><span class="ctx-rl">Regiões de interesse</span><span class="ctx-rv" style="font-size:1rem;">SP · NE · SC</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ §3 RACIONAL ══ -->
+<section id="racional" class="sec">
+  <div class="eyebrow rv"><span class="lbl">02 · Racional Estratégico</span></div>
+  <h2 class="h2 rv">Por que faz sentido investir no Brasil <em>vivendo fora?</em></h2>
+  <div class="rat-grid">
+    <div class="rat-card rv"><div class="rat-n">01</div><div class="rat-title">Diversificação Geográfica Real</div><p class="rat-body">Patrimônio concentrado em um único país é risco silencioso. Ativo no Brasil compõe portfólio genuinamente diversificado em contexto de vida internacional.</p></div>
+    <div class="rat-card rv d1"><div class="rat-n">02</div><div class="rat-title">Preservação de Liquidez</div><p class="rat-body">Consórcio + financiamento evitam mobilização integral do capital. Os R$ 400.000 em CDI continuam rendendo. Patrimônio não é sinônimo de descapitalização.</p></div>
+    <div class="rat-card rv d2"><div class="rat-n">03</div><div class="rat-title">Ativo Real com Renda</div><p class="rat-body">Destino turístico consolidado no Nordeste com demanda de short stay robusta. Exposição a ativo real com potencial de renda independente de câmbio australiano.</p></div>
+    <div class="rat-card rv d3"><div class="rat-n">04</div><div class="rat-title">Uso Futuro &amp; Proteção</div><p class="rat-body">Base durante visitas ao Brasil, lazer para a família, ativo transferível aos filhos. Uma propriedade que cumpre múltiplos papéis ao longo do tempo.</p></div>
+    <div class="rat-card rv d4"><div class="rat-n">05</div><div class="rat-title">Opcionalidade Preservada</div><p class="rat-body">A estrutura mantém flexibilidade: vender valorizado, manter renda, usar pessoalmente ou transferir. Boas estruturas não eliminam opções — elas as criam.</p></div>
+    <div class="rat-card rv"><div class="rat-n">06</div><div class="rat-title">Coerência com a Vida Atual</div><p class="rat-body">Para um casal em transição internacional sem permanência definitiva, liquidez é segurança. Esta proposta respeita essa realidade — e constrói sobre ela.</p></div>
+  </div>
+</section>
+
+<!-- ══ §4 EMPREENDIMENTO — GALERIA + INFO ══ -->
+<section id="empreendimento">
+  <!-- CARROSSEL VERTICAL -->
+  <style>
+  .crs-wrap{display:grid;grid-template-columns:96px 1fr;background:#0e0d0c;height:640px;position:relative}
+  .crs-thumbs{display:flex;flex-direction:column;gap:3px;overflow-y:auto;scrollbar-width:none;padding:3px}
+  .crs-thumbs::-webkit-scrollbar{display:none}
+  .crs-thumb{flex:0 0 84px;height:84px;cursor:pointer;overflow:hidden;opacity:.45;transition:opacity .25s,outline .2s;outline:2px solid transparent}
+  .crs-thumb.active{opacity:1;outline:2px solid var(--gold)}
+  .crs-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .crs-main{position:relative;overflow:hidden;cursor:zoom-in}
+  .crs-main img{width:100%;height:100%;object-fit:cover;transition:opacity .35s ease}
+  .crs-main img.fading{opacity:0}
+  .crs-btn{position:absolute;right:1.2rem;width:40px;height:40px;background:rgba(26,25,24,.7);border:1px solid rgba(197,160,85,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s;z-index:5;color:var(--gold)}
+  .crs-btn:hover{background:rgba(197,160,85,.2)}
+  .crs-btn-up{top:1.2rem}
+  .crs-btn-dn{top:4.2rem}
+  .crs-expand{position:absolute;bottom:1.2rem;right:1.2rem;width:40px;height:40px;background:rgba(26,25,24,.7);border:1px solid rgba(197,160,85,.3);display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;color:var(--gold);transition:background .2s}
+  .crs-expand:hover{background:rgba(197,160,85,.2)}
+  .crs-counter{position:absolute;bottom:1.2rem;left:50%;transform:translateX(-50%);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(197,160,85,.6);background:rgba(0,0,0,.5);padding:.3rem .8rem;z-index:5}
+  .crs-caption{position:absolute;bottom:0;left:0;right:0;padding:.7rem 1.2rem;background:linear-gradient(0deg,rgba(0,0,0,.65),transparent);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,235,.5);z-index:5}
+  /* LIGHTBOX */
+  .lb{position:fixed;inset:0;z-index:9999;background:rgba(10,9,8,.96);display:none;align-items:center;justify-content:center;flex-direction:column}
+  .lb.open{display:flex}
+  .lb-img{max-width:90vw;max-height:85vh;object-fit:contain;transition:opacity .3s}
+  .lb-img.fading{opacity:0}
+  .lb-close{position:fixed;top:1.5rem;right:1.8rem;width:44px;height:44px;background:rgba(197,160,85,.15);border:1px solid rgba(197,160,85,.3);color:var(--gold);font-size:1.4rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .lb-close:hover{background:rgba(197,160,85,.3)}
+  .lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:50px;height:50px;background:rgba(197,160,85,.12);border:1px solid rgba(197,160,85,.25);color:var(--gold);font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .lb-nav:hover{background:rgba(197,160,85,.25)}
+  .lb-prev{left:1.5rem}.lb-next{right:1.5rem}
+  .lb-caption{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(197,160,85,.55)}
+  @media(max-width:768px){
+    .crs-wrap{grid-template-columns:64px 1fr;height:420px}
+    .crs-thumb{flex:0 0 58px;height:58px}
+  }
+  </style>
+
+  <div class="crs-wrap" id="carousel">
+    <!-- Thumbnails -->
+    <div class="crs-thumbs" id="crsThumbsWrap">
+      <div class="crs-thumb active" data-idx="0" onclick="crsGo(0)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22758307179050722/zt9ylxi2njzimtljnmq0nta5_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="1" onclick="crsGo(1)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760604051897169/rh1xw9a2njzimjjizmi1nwrk_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="2" onclick="crsGo(2)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760679690310370/2tepkc2njzimjmwyjvkmti5_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="3" onclick="crsGo(3)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760695127457946/xdvktxw2njzimjmxywm3zdew_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="4" onclick="crsGo(4)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760709253233678/mhwirwy2njzimjmyogu2njy2_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="5" onclick="crsGo(5)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22761074091479857/kuhpbeo2njzimjq5nwjmmgq0_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="6" onclick="crsGo(6)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762118306719509/y5hmale2njzimjhhowyzodyz_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="7" onclick="crsGo(7)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762129480088147/xuj0fe02njzimjhinti5njnm_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="8" onclick="crsGo(8)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762261958734461/x7byjok2njzimjkzotllotrk_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="9" onclick="crsGo(9)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762359369802200/ght6vxq2njzimjk5yjblytcz_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="10" onclick="crsGo(10)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762383579018132/psihh7s2njzimjlimzqxzdfl_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="11" onclick="crsGo(11)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762393008204436/eexrjca2njzimjliy2fhoti1_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="12" onclick="crsGo(12)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762745996808883/tbvaycg2njzimmixzge3zwji_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="13" onclick="crsGo(13)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762757865260208/ps0n3vo2njzimmiyotg3zdq0_md.jpg" alt=""/></div>
+      <div class="crs-thumb" data-idx="14" onclick="crsGo(14)"><img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762808015106025/r3yofam2njzimmi1ymfjnddk_md.jpg" alt=""/></div>
+    </div>
+    <!-- Main image -->
+    <div class="crs-main" onclick="lbOpen(crsIdx)">
+      <img id="crsMainImg" src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22758307179050722/zt9ylxi2njzimtljnmq0nta5_md.jpg" alt="Max Carneiros Exclusive"/>
+      <button class="crs-btn crs-btn-up" onclick="event.stopPropagation();crsMove(-1)" aria-label="Anterior">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" transform="rotate(0 12 12)"/></svg>
+      </button>
+      <button class="crs-btn crs-btn-dn" onclick="event.stopPropagation();crsMove(1)" aria-label="Próximo">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"/></svg>
+      </button>
+      <div class="crs-expand" onclick="event.stopPropagation();lbOpen(crsIdx)" aria-label="Ampliar">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15"/></svg>
+      </div>
+      <div class="crs-counter"><span id="crsCountCur">1</span> / <span id="crsCountTotal">15</span></div>
+      <div class="crs-caption" id="crsCap">Área de lazer · piscinas</div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div class="lb" id="lightbox" onclick="lbClose()">
+    <button class="lb-close" onclick="lbClose()">✕</button>
+    <img class="lb-img" id="lbImg" src="" alt="" onclick="event.stopPropagation()"/>
+    <button class="lb-nav lb-prev" onclick="event.stopPropagation();lbNav(-1)">&#8592;</button>
+    <button class="lb-nav lb-next" onclick="event.stopPropagation();lbNav(1)">&#8594;</button>
+    <div class="lb-caption" id="lbCap"></div>
+  </div>
+
+  <script>
+  const crsImages = [
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22758307179050722/zt9ylxi2njzimtljnmq0nta5_md.jpg',cap:'Piscinas · área de lazer'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760604051897169/rh1xw9a2njzimjjizmi1nwrk_md.jpg',cap:'Piscina privativa · unidades térreas'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760679690310370/2tepkc2njzimjmwyjvkmti5_md.jpg',cap:'Lounge externo · área de convivência'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760695127457946/xdvktxw2njzimjmxywm3zdew_md.jpg',cap:'Área de lazer · resort'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760709253233678/mhwirwy2njzimjmyogu2njy2_md.jpg',cap:'Interior · sala e cozinha'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22761074091479857/kuhpbeo2njzimjq5nwjmmgq0_md.jpg',cap:'Suíte · acabamento premium'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762118306719509/y5hmale2njzimjhhowyzodyz_md.jpg',cap:'Rooftop · sky lounge'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762129480088147/xuj0fe02njzimjhinti5njnm_md.jpg',cap:'Vista aérea · localização'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762261958734461/x7byjok2njzimjkzotllotrk_md.jpg',cap:'Espaço gourmet · rooftop'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762359369802200/ght6vxq2njzimjk5yjblytcz_md.jpg',cap:'Área de lazer · piscina'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762383579018132/psihh7s2njzimjlimzqxzdfl_md.jpg',cap:'Lounge · área social'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762393008204436/eexrjca2njzimjliy2fhoti1_md.jpg',cap:'Área de lazer · deck'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762745996808883/tbvaycg2njzimmixzge3zwji_md.jpg',cap:'Praia dos Carneiros · entorno'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762757865260208/ps0n3vo2njzimmiyotg3zdq0_md.jpg',cap:'Piscina · resort'},
+    {src:'https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762808015106025/r3yofam2njzimmi1ymfjnddk_md.jpg',cap:'Área de lazer · jardim'}
+  ];
+  let crsIdx = 0;
+  const mainImg = document.getElementById('crsMainImg');
+  const crsCountCur = document.getElementById('crsCountCur');
+  const crsCap = document.getElementById('crsCap');
+  document.getElementById('crsCountTotal').textContent = crsImages.length;
+
+  function crsGo(idx) {
+    crsIdx = (idx + crsImages.length) % crsImages.length;
+    mainImg.classList.add('fading');
+    setTimeout(() => {
+      mainImg.src = crsImages[crsIdx].src;
+      mainImg.onload = () => mainImg.classList.remove('fading');
+      crsCap.textContent = crsImages[crsIdx].cap;
+      crsCountCur.textContent = crsIdx + 1;
+      document.querySelectorAll('.crs-thumb').forEach((t,i) => t.classList.toggle('active', i === crsIdx));
+      // scroll only inside the thumb strip — never touches the page scroll
+      const wrap = document.getElementById('crsThumbsWrap');
+      const thumbEl = document.querySelectorAll('.crs-thumb')[crsIdx];
+      if(wrap && thumbEl) {
+        const target = thumbEl.offsetTop - wrap.clientHeight / 2 + thumbEl.clientHeight / 2;
+        wrap.scrollTo({top: target, behavior: 'smooth'});
+      }
+    }, 180);
+  }
+  function crsMove(dir) { crsGo(crsIdx + dir); }
+
+  // Auto-advance only when carousel is visible in viewport
+  let crsTimer = null;
+  function startTimer() { if(!crsTimer) crsTimer = setInterval(() => crsMove(1), 5000); }
+  function stopTimer()  { clearInterval(crsTimer); crsTimer = null; }
+
+  const crsObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting ? startTimer() : stopTimer());
+  }, { threshold: 0.3 });
+  crsObserver.observe(document.getElementById('carousel'));
+
+  document.getElementById('carousel').addEventListener('mouseenter', stopTimer);
+  document.getElementById('carousel').addEventListener('mouseleave', startTimer);
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if(document.getElementById('lightbox').classList.contains('open')){
+      if(e.key==='ArrowLeft'||e.key==='ArrowUp') lbNav(-1);
+      if(e.key==='ArrowRight'||e.key==='ArrowDown') lbNav(1);
+      if(e.key==='Escape') lbClose();
+    } else {
+      if(e.key==='ArrowUp') crsMove(-1);
+      if(e.key==='ArrowDown') crsMove(1);
+    }
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCapEl = document.getElementById('lbCap');
+  let lbIdx = 0;
+  function lbOpen(idx) {
+    lbIdx = idx;
+    lbImg.src = crsImages[lbIdx].src;
+    lbCapEl.textContent = crsImages[lbIdx].cap + ' · ' + (lbIdx+1) + ' / ' + crsImages.length;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function lbClose() { lb.classList.remove('open'); document.body.style.overflow=''; }
+  function lbNav(dir) {
+    lbIdx = (lbIdx + dir + crsImages.length) % crsImages.length;
+    lbImg.classList.add('fading');
+    setTimeout(() => {
+      lbImg.src = crsImages[lbIdx].src;
+      lbCapEl.textContent = crsImages[lbIdx].cap + ' · ' + (lbIdx+1) + ' / ' + crsImages.length;
+      lbImg.onload = () => lbImg.classList.remove('fading');
+    }, 200);
+  }
+  </script>
+
+  <div class="sec-cream"><div class="inner">
+    <div class="eyebrow rv"><span class="lbl">03 · O Empreendimento</span></div>
+    <h2 class="h2 rv">Resort integrado <em>a 250m do mar.</em></h2>
+    <div class="prop-meta">
+      <div class="pmeta-l">
+        <p class="lead rv" style="font-size:.9rem;max-width:100%;">Complexo residencial-turístico pela MaxPlural — +12 anos de mercado, +15 empreendimentos entregues no litoral NE, seguro de entrega via Caixa.</p>
+        <div class="prop-specs rv">
+          <div class="pspec"><div class="pspec-l">Total de unidades</div><div class="pspec-v">135</div></div>
+          <div class="pspec"><div class="pspec-l">Torres</div><div class="pspec-v">2 torres</div></div>
+          <div class="pspec"><div class="pspec-l">Tipologias</div><div class="pspec-v">1 a 4 quartos</div></div>
+          <div class="pspec"><div class="pspec-l">Área de lazer</div><div class="pspec-v">3.115 m²</div></div>
+          <div class="pspec"><div class="pspec-l">Distância ao mar</div><div class="pspec-v">250 m</div></div>
+          <div class="pspec"><div class="pspec-l">Entrega prevista</div><div class="pspec-v">2º sem. 2028</div></div>
+        </div>
+        <p class="lbl" style="margin-bottom:.7rem;">Infraestrutura completa</p>
+        <div class="atags rv">
+          <span class="atag">Piscinas adulto · baby</span><span class="atag">Hidromassagem</span><span class="atag">Rooftop Sky Bar</span><span class="atag">Beach Tennis</span><span class="atag">Academia</span><span class="atag">Coworking</span><span class="atag">Brinquedoteca</span><span class="atag">Self Market</span><span class="atag">Pet Place</span><span class="atag">Fechadura digital</span><span class="atag">Espaço gourmet</span><span class="atag">Portaria virtual</span>
+        </div>
+      </div>
+      <div class="pmeta-r rv">
+        <div style="background:var(--teal);padding:1.8rem;margin-bottom:1.4rem;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--warm);">Praia dos Carneiros</div>
+          <div style="font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,241,235,.42);margin:.4rem 0 .9rem;">Tamandaré · Pernambuco · Litoral Sul</div>
+          <div style="font-size:.85rem;color:rgba(245,241,235,.6);line-height:1.65;">Uma das praias mais preservadas do Nordeste. Águas calmas, piscinas naturais. ~600 mil visitantes/ano. Demanda STR estável e crescente.</div>
+        </div>
+        <div class="loc-rows">
+          <div class="loc-row"><div class="loc-d">90 km</div><div class="loc-n">Recife · Aeroporto Internacional via PE-060</div></div>
+          <div class="loc-row"><div class="loc-d">250 m</div><div class="loc-n">Mar · acesso direto à Praia dos Carneiros</div></div>
+          <div class="loc-row"><div class="loc-d">400 m</div><div class="loc-n">Acquaventura Park</div></div>
+          <div class="loc-row"><div class="loc-d">1 km</div><div class="loc-n">Restaurante Beijupirá</div></div>
+          <div class="loc-row"><div class="loc-d">1,2 km</div><div class="loc-n">Bora Bora Beach Club</div></div>
+        </div>
+        <div class="prop-note"><p><strong style="font-weight:500;color:var(--smoke);">Mercado STR.</strong> Ocupação média 65–80%+. Eventos âncora: Réveillon, Carnaval, feriados, beach tennis, casamentos. ADR referenciado R$ 420–520/noite.</p></div>
+      </div>
+    </div>
+  </div></div>
+</section>
+
+<!-- ══ §5 UNIDADE ══ -->
+<section id="unidade" class="sec-dark">
+  <div class="inner">
+    <div class="eyebrow rv"><span class="lbl">04 · Unidade Selecionada</span></div>
+    <h2 class="h2 h2-lt rv">Unidade <em>A010</em> — a posição que estrutura a proposta.</h2>
+    <p class="lead lead-lt rv" style="font-size:.9rem;max-width:520px;">1 quarto com piscina privativa — o formato mais demandado em short stay premium no Nordeste.</p>
+    <div class="unit-card rv">
+      <div class="ucl">
+        <div>
+          <div class="u-badge">Torre A · Piscina Privativa</div>
+          <div class="u-name">A010</div>
+          <div class="u-desc">01 Quarto · Vagas Rotativas</div>
+          <div class="u-area"><div class="u-area-n">33<span style="font-size:2rem;">,61</span></div><div class="u-area-t">m² privativos<br/>cobertos</div></div>
+        </div>
+        <div>
+          <div style="height:1px;background:rgba(197,160,85,.13);margin:1.5rem 0;"></div>
+          <div style="font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(197,160,85,.42);margin-bottom:.35rem;">Valor por m²</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-size:1.7rem;color:var(--warm);">~R$ 17.400<span style="font-size:.85rem;color:rgba(245,241,235,.28);">/m²</span></div>
+          <div style="font-size:.7rem;color:rgba(245,241,235,.26);margin-top:.2rem;">INCC congelado durante obra</div>
+        </div>
+      </div>
+      <div class="ucr">
+        <div class="flow-lbl">Fluxo de Pagamento · Tabela Março 2026</div>
+        <div class="flow-step"><div class="fnum">1</div><div><div class="flbl">Sinal</div><div class="fsub">Entrada na assinatura</div></div><div class="fval hl">R$ 58.490</div></div>
+        <div class="flow-step"><div class="fnum">2</div><div><div class="flbl">39 Parcelas Mensais</div><div class="fsub">Durante a obra</div></div><div class="fval">R$ 2.999/mês</div></div>
+        <div class="flow-step"><div class="fnum">3</div><div><div class="flbl">06 Intercaladas</div><div class="fsub">Semestrais</div></div><div class="fval">R$ 9.748 cada</div></div>
+        <div class="flow-step"><div class="fnum">4</div><div><div class="flbl">Financiamento nas Chaves</div><div class="fsub">Saldo bancário · entrega 2028</div></div><div class="fval hl">R$ 350.940</div></div>
+        <div class="unit-total"><div><div class="ut-l">Valor Total · Março 2026</div><div class="ut-s">Sujeito à atualização</div></div><div class="ut-v">R$ 584.900</div></div>
+        <div class="cons-box">
+          <div class="cons-t">Instrumento Complementar · Consórcio</div>
+          <div class="cons-vals">
+            <div><div class="cons-val-l">Cota</div><div class="cons-val-n">R$ 340.000</div></div>
+            <div><div class="cons-val-l">Parcela Mensal</div><div class="cons-val-n">R$ 1.582<span style="font-size:1rem;">,50</span></div></div>
+          </div>
+          <p class="cons-note">A carta de crédito compõe o saldo das chaves sem mobilizar o capital em CDI. Contemplação via sorteio ou lance — não garantida.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;height:260px;">
+  <img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22760510750236428/qpcnvk02njzimji2mjziyza1_md.jpg" alt="Piscinas" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+  <img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762757865260208/ps0n3vo2njzimmiyotg3zdq0_md.jpg" alt="Piscina rooftop" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+  <img src="https://cdn3.praedium.com.br/7572iL03HfStp3MK336/22762383579018132/psihh7s2njzimjlimzqxzdfl_md.jpg" alt="Lounge" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+</div>
+
+<!-- ══ §6 RENTABILIDADE ══ -->
+<section id="rentabilidade" class="sec-dark" style="border-top:1px solid rgba(197,160,85,.08);">
+  <div class="inner">
+    <div class="eyebrow rv"><span class="lbl">05 · Estudo de Rentabilidade</span></div>
+    <h2 class="h2 h2-lt rv">O que o imóvel <em>entrega</em> como investimento.</h2>
+    <p class="lead lead-lt rv" style="font-size:.9rem;max-width:580px;">Análise completa de investimento total (CAPEX), custos operacionais (OPEX), projeção de renda short stay e evolução patrimonial em 5 anos. Dados baseados em benchmarks de mercado para a região de Carneiros — projeções indicativas.</p>
+
+    <!-- CAPEX -->
+    <div style="margin-top:2.5rem;" class="rv">
+      <p class="lbl" style="margin-bottom:.8rem;">CAPEX · Investimento Total Estimado</p>
+      <div class="rent-capex">
+        <div class="capex-card">
+          <div class="capex-badge mid">Modelo Médio Padrão</div>
+          <div class="capex-title">Setup para operação Airbnb / Booking</div>
+          <div class="capex-rows">
+            <div class="capex-row"><span class="capex-row-l">Imóvel A010 (VGV mar/26)</span><span class="capex-row-v">R$ 584.900</span></div>
+            <div class="capex-row"><span class="capex-row-l">ITBI + Escritura (~5%)</span><span class="capex-row-v">R$ 29.245</span></div>
+            <div class="capex-row"><span class="capex-row-l">Mobília padrão Airbnb</span><span class="capex-row-v">R$ 45.000</span></div>
+            <div class="capex-row"><span class="capex-row-l">Enxoval + setup operacional</span><span class="capex-row-v">R$ 8.000</span></div>
+          </div>
+          <div class="capex-total-row"><span class="capex-total-l">CAPEX Total</span><span class="capex-total-v">R$ 667.145</span></div>
+        </div>
+        <div class="capex-card">
+          <div class="capex-badge hi">Modelo Alto Padrão RC</div>
+          <div class="capex-title">Setup premium para posicionamento diferenciado</div>
+          <div class="capex-rows">
+            <div class="capex-row"><span class="capex-row-l">Imóvel A010 (VGV mar/26)</span><span class="capex-row-v">R$ 584.900</span></div>
+            <div class="capex-row"><span class="capex-row-l">ITBI + Escritura (~5%)</span><span class="capex-row-v">R$ 29.245</span></div>
+            <div class="capex-row"><span class="capex-row-l">Mobília design alto padrão</span><span class="capex-row-v">R$ 70.000</span></div>
+            <div class="capex-row"><span class="capex-row-l">Decoração + automação + fechadura</span><span class="capex-row-v">R$ 20.000</span></div>
+          </div>
+          <div class="capex-total-row"><span class="capex-total-l">CAPEX Total</span><span class="capex-total-v">R$ 704.145</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OPEX -->
+    <div style="margin-top:2.5rem;" class="rv">
+      <p class="lbl" style="margin-bottom:.8rem;">OPEX · Custo Operacional Mensal Fixo</p>
+      <div class="opex-strip">
+        <div class="opex-item">
+          <div class="opex-item-ico"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21"/></svg></div>
+          <div class="opex-item-l">Condomínio</div><div class="opex-item-v">Taxa fixa</div>
+        </div>
+        <div class="opex-item">
+          <div class="opex-item-ico"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12"/></svg></div>
+          <div class="opex-item-l">IPTU</div><div class="opex-item-v">Mensal</div>
+        </div>
+        <div class="opex-item">
+          <div class="opex-item-ico"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg></div>
+          <div class="opex-item-l">Água + Luz</div><div class="opex-item-v">Utilidades</div>
+        </div>
+        <div class="opex-item">
+          <div class="opex-item-ico"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0"/></svg></div>
+          <div class="opex-item-l">Internet</div><div class="opex-item-v">Banda larga</div>
+        </div>
+        <div class="opex-item">
+          <div class="opex-item-ico"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.653-4.655m5.33-4.21c.684-.684 1.769-.684 2.453 0 .684.684.684 1.769 0 2.453"/></svg></div>
+          <div class="opex-item-l">Manutenção</div><div class="opex-item-v">Preventiva</div>
+        </div>
+      </div>
+      <div class="opex-total">
+        <div><div class="opex-total-l">OPEX Fixo Mensal Estimado</div><div style="font-size:.7rem;color:rgba(245,241,235,.25);margin-top:.1rem;">Gestão profissional (15–18% da receita bruta) é custo variável — não incluso acima</div></div>
+        <div class="opex-total-v">R$ 1.440<span style="font-size:1rem;color:rgba(245,241,235,.3);">/mês</span></div>
+      </div>
+    </div>
+
+    <!-- CENÁRIOS DE RENDA -->
+    <div style="margin-top:3rem;">
+      <p class="lbl rv" style="margin-bottom:.4rem;">Projeção de Renda · Short Stay</p>
+      <p style="font-size:.78rem;color:rgba(245,241,235,.35);margin-bottom:0;" class="rv">Benchmarks AirDNA / RC para região de Carneiros · unidade 1 quarto com piscina privativa · projeção indicativa</p>
+      <div class="rent-scenarios rv" style="margin-top:1.2rem;">
+        <div class="scen-card scen-base">
+          <div class="scen-badge"><span class="scen-dot" style="background:var(--teal-lt);"></span><span class="scen-badge-txt">Cenário Base · Gestão Convencional</span></div>
+          <div class="scen-title">Operação padrão</div>
+          <div class="scen-sub">Plataformas + gestora local · sem precificação dinâmica avançada</div>
+          <div class="scen-rows">
+            <div class="scen-row"><span class="scen-row-l">ADR médio (diária)</span><span class="scen-row-v">R$ 420</span></div>
+            <div class="scen-row"><span class="scen-row-l">Ocupação estimada</span><span class="scen-row-v">65%</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita bruta / mês</span><span class="scen-row-v">R$ 8.190</span></div>
+            <div class="scen-row"><span class="scen-row-l">OPEX fixo</span><span class="scen-row-v">– R$ 1.440</span></div>
+            <div class="scen-row"><span class="scen-row-l">Gestão profissional (~18%)</span><span class="scen-row-v">– R$ 1.474</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita líquida / mês</span><span class="scen-row-v hl">~R$ 5.276</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita líquida / ano</span><span class="scen-row-v hl">~R$ 63.300</span></div>
+          </div>
+          <div class="scen-caprate">
+            <div class="scen-caprate-l">Cap Rate indicativo (CAPEX médio R$ 667k)</div>
+            <div class="scen-caprate-v">~9,5% a.a.</div>
+          </div>
+        </div>
+        <div class="scen-card scen-premium">
+          <div class="scen-badge"><span class="scen-dot" style="background:var(--gold);"></span><span class="scen-badge-txt" style="color:var(--gold-lt);">Cenário RC Premium · Gestão Profissional</span></div>
+          <div class="scen-title" style="color:var(--gold-lt);">Operação diferenciada</div>
+          <div class="scen-sub">Precificação dinâmica · fotografia pro · posicionamento premium</div>
+          <div class="scen-rows">
+            <div class="scen-row"><span class="scen-row-l">ADR médio (diária)</span><span class="scen-row-v">R$ 520</span></div>
+            <div class="scen-row"><span class="scen-row-l">Ocupação estimada</span><span class="scen-row-v">75%</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita bruta / mês</span><span class="scen-row-v">R$ 11.700</span></div>
+            <div class="scen-row"><span class="scen-row-l">OPEX fixo</span><span class="scen-row-v">– R$ 1.440</span></div>
+            <div class="scen-row"><span class="scen-row-l">Gestão profissional (~18%)</span><span class="scen-row-v">– R$ 2.106</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita líquida / mês</span><span class="scen-row-v hl">~R$ 8.154</span></div>
+            <div class="scen-row"><span class="scen-row-l">Receita líquida / ano</span><span class="scen-row-v hl">~R$ 97.850</span></div>
+          </div>
+          <div class="scen-caprate">
+            <div class="scen-caprate-l">Cap Rate indicativo (CAPEX alto padrão R$ 704k)</div>
+            <div class="scen-caprate-v" style="font-size:2.4rem;">~13,9% a.a.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALORIZAÇÃO 5 ANOS -->
+    <div style="margin-top:3.5rem;">
+      <p class="lbl rv" style="margin-bottom:1.5rem;">Valorização Projetada &amp; Patrimônio em 5 Anos</p>
+      <div class="valorizacao-grid">
+        <div class="valorizacao-chart rv">
+          <div class="val-chart-title">Evolução do valor do imóvel · 2026–2031 · projeção indicativa</div>
+          <svg class="val-chart-svg" viewBox="0 0 440 220" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="20" x2="50" y2="190" stroke="rgba(197,160,85,.12)" stroke-width="1"/>
+            <line x1="50" y1="190" x2="430" y2="190" stroke="rgba(197,160,85,.12)" stroke-width="1"/>
+            <line x1="50" y1="148" x2="430" y2="148" stroke="rgba(197,160,85,.07)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="50" y1="107" x2="430" y2="107" stroke="rgba(197,160,85,.07)" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="50" y1="55" x2="430" y2="55" stroke="rgba(197,160,85,.07)" stroke-width="1" stroke-dasharray="4,4"/>
+            <text x="44" y="193" text-anchor="end" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">585k</text>
+            <text x="44" y="151" text-anchor="end" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">690k</text>
+            <text x="44" y="110" text-anchor="end" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">800k</text>
+            <text x="44" y="58" text-anchor="end" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">940k</text>
+            <text x="50" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2026</text>
+            <text x="126" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2027</text>
+            <text x="202" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2028</text>
+            <text x="278" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2029</text>
+            <text x="354" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2030</text>
+            <text x="430" y="204" text-anchor="middle" fill="rgba(245,241,235,.3)" font-family="DM Sans,sans-serif" font-size="9">2031</text>
+            <!-- Conservador 8% a.a.: 585→632→682→736→795→858 mapped to y: 190→176→161→144→126→105 -->
+            <polygon points="50,190 126,176 202,161 278,144 354,126 430,105 430,190" fill="rgba(92,122,110,.1)"/>
+            <polyline points="50,190 126,176 202,161 278,144 354,126 430,105" fill="none" stroke="#5C7A6E" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Otimista 10% a.a.: 585→644→708→779→857→943 mapped to y: 190→170→149→126→101→72 -->
+            <polygon points="50,190 126,170 202,149 278,126 354,101 430,72 430,190" fill="rgba(197,160,85,.07)"/>
+            <polyline points="50,190 126,170 202,149 278,126 354,101 430,72" fill="none" stroke="#C5A055" stroke-width="2" stroke-linejoin="round"/>
+            <circle cx="430" cy="105" r="3.5" fill="#5C7A6E"/>
+            <circle cx="430" cy="72" r="3.5" fill="#C5A055"/>
+            <text x="434" y="109" fill="#5C7A6E" font-family="Cormorant Garamond,serif" font-size="11">R$ 859k</text>
+            <text x="434" y="70" fill="#C5A055" font-family="Cormorant Garamond,serif" font-size="11">R$ 941k</text>
+            <circle cx="50" cy="190" r="3" fill="rgba(245,241,235,.25)"/>
+            <text x="55" y="186" fill="rgba(245,241,235,.3)" font-family="Cormorant Garamond,serif" font-size="10">R$ 585k</text>
+          </svg>
+          <div class="val-legend">
+            <div class="val-legend-item"><div class="val-legend-line" style="background:#C5A055;"></div>Otimista · +10% a.a. · +61%</div>
+            <div class="val-legend-item"><div class="val-legend-line" style="background:#5C7A6E;"></div>Conservador · +8% a.a. · +47%</div>
+          </div>
+        </div>
+        <div class="patrimonio-cards">
+          <div class="pat-card conserv rv">
+            <div class="pat-card-badge">Cenário Conservador · 8% a.a.</div>
+            <div class="pat-card-title">Patrimônio total projetado em 5 anos</div>
+            <div class="pat-breakdown">
+              Valor do imóvel em 2031: <strong style="color:rgba(245,241,235,.7);">R$ 859.203</strong><br/>
+              + Renda líquida acumulada (cenário base): <strong style="color:rgba(245,241,235,.7);">R$ 316.560</strong><br/>
+              Valorização acumulada: <strong style="color:#7A9E90;">+47% sobre VGV</strong>
+            </div>
+            <div class="pat-total-line">
+              <span class="pat-total-l">Total projetado</span>
+              <span class="pat-total-v">~R$ 1.175.763</span>
+            </div>
+          </div>
+          <div class="pat-card otimista rv d1">
+            <div class="pat-card-badge">Cenário Otimista RC · 10% a.a.</div>
+            <div class="pat-card-title">Patrimônio total projetado em 5 anos</div>
+            <div class="pat-breakdown">
+              Valor do imóvel em 2031: <strong style="color:rgba(245,241,235,.7);">R$ 941.089</strong><br/>
+              + Renda líquida acumulada (cenário premium): <strong style="color:rgba(245,241,235,.7);">R$ 489.240</strong><br/>
+              Valorização acumulada: <strong style="color:var(--gold-lt);">+61% sobre VGV</strong>
+            </div>
+            <div class="pat-total-line">
+              <span class="pat-total-l">Total projetado</span>
+              <span class="pat-total-v">~R$ 1.430.329</span>
+            </div>
+          </div>
+          <div class="pat-note rv d2">
+            <p>Projeções indicativas. Combinam valorização imobiliária estimada com renda líquida acumulada. Não incluem impostos sobre locação, refinanciamento bancário, variação de índices (INCC/IPCA/IGP-M) ou custos de transação futura. Consulte assessor financeiro.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ §7 ENGENHARIA ══ -->
+<section id="estrutura" class="sec-dark" style="border-top:1px solid rgba(197,160,85,.08);">
+  <div class="inner">
+    <div class="eyebrow rv"><span class="lbl">06 · Engenharia Financeira</span></div>
+    <h2 class="h2 h2-lt rv">Preservar liquidez não é renúncia. <em>É decisão estratégica.</em></h2>
+    <p class="lead lead-lt rv" style="font-size:.9rem;">A proposta estrutura acesso a um ativo relevante sem comprometer o capital disponível — mantendo opcionalidade, produtividade e segurança.</p>
+    <div class="eng-grid">
+      <div class="eng-diagram rv">
+        <div class="eng-dt">Estrutura da operação · visão esquemática</div>
+        <div class="eng-block"><div class="eng-line" style="background:var(--gold);"></div><div><div class="eng-bl">Capital preservado</div><div class="eng-bt">R$ 400.000 em CDI · ~11% a.a.</div><div class="eng-bn">Continua rendendo (~R$ 3.667/mês bruto indicativo). Não é mobilizado. Mantém a família líquida.</div></div></div>
+        <div class="eng-block"><div class="eng-line" style="background:var(--teal-lt);"></div><div><div class="eng-bl">Ativo na planta</div><div class="eng-bt">Unidade A010 · R$ 584.900</div><div class="eng-bn">Sinal + mensais + intercaladas. Saldo de chaves via financiamento + carta de consórcio.</div></div></div>
+        <div class="eng-block"><div class="eng-line" style="background:var(--sage);"></div><div><div class="eng-bl">Consórcio</div><div class="eng-bt">R$ 340.000 · R$ 1.582,50/mês</div><div class="eng-bn">Poupança com propósito. Carta de crédito para as chaves sem desembolso do CDI.</div></div></div>
+        <div class="eng-block"><div class="eng-line" style="background:var(--champagne);"></div><div><div class="eng-bl">Renda pós-entrega</div><div class="eng-bt">~R$ 5.500 a R$ 7.800/mês líquidos</div><div class="eng-bn">Short stay com gestora profissional. Projeção indicativa — depende de ocupação e sazonalidade.</div></div></div>
+      </div>
+      <div class="eng-pts rv d1">
+        <div class="eng-pt"><div class="eng-pt-t">CDI: o ativo que trabalha enquanto o imóvel é construído.</div><div class="eng-pt-b">Os R$ 400.000 a 11% a.a. geram ~R$ 44.000/ano bruto indicativo. Mobilizá-los integralmente significa abrir mão dessa produtividade por anos. A estrutura proposta mantém esse motor funcionando.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">Comprometimento mensal: racionalidade, não sacrifício.</div><div class="eng-pt-b">Imóvel (~R$ 2.999) + consórcio (R$ 1.582) = ~R$ 4.581/mês. Planejável e sustentável — comparável ao rendimento atual do imóvel no Brasil (R$ 4.500/mês). Sem descapitalizar o portfólio.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">Três pilares de patrimônio, não concentração.</div><div class="eng-pt-b">Imóvel residencial (~R$ 1M) + capital financeiro (~R$ 400k) + ativo turístico (~R$ 584k VGV). Classes e regiões distintas. Capital disponível para SP, SC e demais regiões do planejamento híbrido.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">2028: o ponto de inflexão.</div><div class="eng-pt-b">Na entrega, os filhos terão 11 e 7 anos. A família terá 46 e 53. O ativo estará valorizado, com renda potencial de mercado e financiamento estruturado — sem ter sacrificado liquidez.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ §7 COMPARATIVO ══ -->
+<section id="comparativo" class="sec-cream">
+  <div class="inner">
+    <div class="eyebrow rv"><span class="lbl">06 · Leitura Comparativa</span></div>
+    <h2 class="h2 rv">Descapitalizar integralmente <em>versus</em> estruturar com inteligência.</h2>
+    <div class="cmp-grid">
+      <div class="cmp-card cmp-neg rv">
+        <div class="cmp-badge" style="color:var(--smoke);"><span class="cmp-dot" style="background:var(--stone);"></span>Descapitalização integral</div>
+        <div class="cmp-title">Mobilização total do capital.</div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#c0392b;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div><div class="cmp-txt">Os R$ 400.000 em CDI são zerados — extinguindo ~R$ 44.000/ano de produtividade.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#c0392b;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div><div class="cmp-txt">Ausência de reserva líquida. Qualquer necessidade exige venda ou endividamento.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#c0392b;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div><div class="cmp-txt">Opcionalidade eliminada para SP, SC e demais regiões do planejamento híbrido.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#c0392b;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg></div><div class="cmp-txt">Para família em transição internacional, liquidez é especialmente valiosa — este cenário a elimina.</div></div>
+      </div>
+      <div class="cmp-card cmp-pos rv d1">
+        <div class="cmp-badge" style="color:var(--gold);"><span class="cmp-dot" style="background:var(--gold);"></span>Proposta estruturada</div>
+        <div class="cmp-title">Capital preservado. Ativo construído.</div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#27ae60;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div><div class="cmp-txt">R$ 400.000 em CDI permanecem investidos e produtivos durante toda a construção.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#27ae60;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div><div class="cmp-txt">Consórcio estrutura carta de crédito de R$ 340.000 com R$ 1.582,50/mês.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#27ae60;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div><div class="cmp-txt">Portfólio real: imóvel residencial + renda financeira + ativo turístico. Três classes ativas.</div></div>
+        <div class="cmp-row"><div class="cmp-ico" style="color:#27ae60;"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div><div class="cmp-txt">Capital disponível para SP, SC e demais oportunidades do planejamento híbrido.</div></div>
+      </div>
+    </div>
+    <div class="bar-sec rv">
+      <p class="lbl" style="margin-bottom:1.5rem;">Projeção indicativa de rentabilidade · short stay pós-entrega</p>
+      <div class="bar-row"><div class="bar-lbl">Cenário Base</div><div class="bar-track"><div class="bar-fill bfteal" data-w="67"></div></div><div class="bar-val">~12% a.a.</div></div>
+      <div class="bar-row"><div class="bar-lbl">Cenário RC Premium</div><div class="bar-track"><div class="bar-fill bfgold" data-w="88"></div></div><div class="bar-val">~16–18% a.a.</div></div>
+      <div class="bar-row"><div class="bar-lbl">CDI Referencial</div><div class="bar-track"><div class="bar-fill bfstone" data-w="55"></div></div><div class="bar-val">~11% a.a.</div></div>
+      <p style="font-size:.7rem;color:var(--stone);margin-top:.8rem;font-style:italic;">* Projeções indicativas. Rentabilidade real depende de ocupação, gestão e sazonalidade. Não constituem garantia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ENCERRAMENTO ══ -->
+<section id="encerramento" class="closing">
+  <div class="closing-bg"></div>
+  <div class="closing-inner">
+    <div class="closing-orn rv"></div>
+    <h2 class="closing-h rv">Patrimônio com <em>inteligência.</em><br/>Liquidez com propósito.</h2>
+    <p class="closing-body rv">A proposta para Paola e Marcelo não é uma oferta de compra — é uma estrutura patrimonial desenhada para a vida que têm hoje e para o horizonte que constroem amanhã.</p>
+    <div class="closing-pills rv">
+      <div class="cpill">
+        <div class="cpill-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21"/></svg></div>
+        <div class="cpill-t">Ativo Real</div><div class="cpill-b">Posição em destino turístico consolidado com renda e valorização potencial.</div>
+      </div>
+      <div class="cpill">
+        <div class="cpill-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75"/></svg></div>
+        <div class="cpill-t">Liquidez Preservada</div><div class="cpill-b">Capital em CDI mantido produtivo. Opcionalidade financeira intacta.</div>
+      </div>
+      <div class="cpill">
+        <div class="cpill-ico"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <div class="cpill-t">Coerência Estratégica</div><div class="cpill-b">Estrutura alinhada com a vida atual e com o planejamento híbrido da família.</div>
+      </div>
+    </div>
+    <div class="closing-box rv">
+      <div class="closing-box-t">Resumo Executivo</div>
+      <div class="closing-box-c">
+        Unidade A010 · 33,61 m² · Piscina Privativa · R$ 584.900<br/>
+        Consórcio R$ 340.000 · Parcela R$ 1.582,50/mês<br/>
+        Capital CDI preservado · ~R$ 400.000 produtivos<br/>
+        Cap rate projetado ~12–18% a.a. · Entrega 2028<br/>
+        Classificação RC: <em>AAA · 9,0/10</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Material de uso exclusivo para Paola e Marcelo · caráter informativo e consultivo. Projeções de rentabilidade e valorização são indicativas, baseadas em dados de mercado disponíveis à época de elaboração. Rentabilidade passada não garante rentabilidade futura. Contemplação de consórcio não é garantida e depende de sorteio ou lance. Valorização imobiliária sujeita a condições de mercado. Retorno do CDI depende da taxa Selic vigente. Dados da Unidade A010 devem ser confirmados com a incorporadora.</p>
+  <p style="margin-top:.4rem;color:rgba(245,241,235,.1);">Preparado por Rendapê · Planejamento Patrimonial · 2026</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 60));
+const obs = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting) e.target.classList.add('on'); }), {threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.rv').forEach(el => obs.observe(el));
+const bobs = new IntersectionObserver(es => { es.forEach(e => { if(e.isIntersecting){ e.target.querySelectorAll('.bar-fill[data-w]').forEach(b => b.style.width=b.dataset.w+'%'); bobs.unobserve(e.target); } }); }, {threshold:.4});
+document.querySelectorAll('.bar-sec').forEach(s => bobs.observe(s));
+</script>
+</body>
+</html>

@@ -411,6 +411,128 @@ footer p{font-size:.7rem;color:rgba(245,241,235,.22);line-height:1.7;max-width:6
   </div>
 </section>
 
+<!-- ══ PLANEJAMENTO — 3 PILARES ══ -->
+<style>
+.plan-wrap{background:var(--coal);padding:5rem 3rem;text-align:center}
+.plan-inner{max-width:1100px;margin:0 auto}
+.plan-icon-wrap{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;border:1px solid rgba(197,160,85,.25)}
+.plan-pillars{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;margin-top:3.5rem}
+.plan-pillar{padding:2.8rem 2rem;border:1px solid rgba(197,160,85,.15);position:relative;text-align:center;transition:border-color .3s,background .3s}
+.plan-pillar:hover{border-color:rgba(197,160,85,.4);background:rgba(197,160,85,.04)}
+.plan-pillar-num{font-family:'Cormorant Garamond',serif;font-size:.75rem;font-weight:400;letter-spacing:.2em;color:rgba(197,160,85,.4);margin-bottom:1.4rem}
+.plan-pillar-ico{width:64px;height:64px;margin:0 auto 1.4rem;display:flex;align-items:center;justify-content:center;background:rgba(197,160,85,.08);border-radius:50%;border:1px solid rgba(197,160,85,.2)}
+.plan-pillar-ico svg{color:var(--gold)}
+.plan-pillar-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--warm);margin-bottom:.8rem}
+.plan-pillar-val{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-lt);margin-bottom:.7rem}
+.plan-pillar-bullets{list-style:none;text-align:left;display:inline-block}
+.plan-pillar-bullets li{font-size:.8rem;color:rgba(245,241,235,.5);line-height:1.6;padding-left:1.1rem;position:relative}
+.plan-pillar-bullets li::before{content:'·';position:absolute;left:0;color:var(--gold)}
+.plan-arrow{display:flex;align-items:center;justify-content:center;padding:0 1rem;color:rgba(197,160,85,.35);flex-shrink:0}
+.plan-cdi-note{margin-top:2.5rem;padding:1.3rem 2rem;background:rgba(197,160,85,.07);border:1px solid rgba(197,160,85,.18);display:inline-flex;align-items:center;gap:1.2rem}
+.plan-cdi-note-ico{color:var(--gold);flex-shrink:0}
+.plan-cdi-note-txt{font-size:.82rem;color:rgba(245,241,235,.55);text-align:left;line-height:1.6}
+.plan-cdi-note-txt strong{color:var(--warm);font-weight:500}
+@media(max-width:900px){
+  .plan-pillars{grid-template-columns:1fr;gap:2px}
+  .plan-arrow{padding:1rem;transform:rotate(90deg)}
+  .plan-wrap{padding:4rem 1.5rem}
+}
+</style>
+
+<section id="planejamento" class="plan-wrap">
+  <div class="plan-inner">
+    <div class="eyebrow rv" style="justify-content:center;margin-bottom:.9rem">
+      <span class="lbl">A Estrutura de Investimento</span>
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--warm);margin-bottom:.5rem;" class="rv">
+      Três elementos. <em style="font-style:italic;color:var(--gold-lt);">Uma estratégia.</em>
+    </h2>
+    <p style="font-size:.88rem;color:rgba(245,241,235,.45);max-width:500px;margin:0 auto;" class="rv">Como o capital de Paola e Marcelo se organiza para construir patrimônio sem descapitalizar.</p>
+
+    <div class="plan-pillars rv" style="margin-top:3rem;">
+
+      <!-- PILAR 1 -->
+      <div class="plan-pillar">
+        <div class="plan-pillar-num">01</div>
+        <div class="plan-pillar-ico">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75"/>
+          </svg>
+        </div>
+        <div class="plan-pillar-title">Imóvel na Planta</div>
+        <div class="plan-pillar-val">R$ 584.900</div>
+        <ul class="plan-pillar-bullets">
+          <li>Unidade A010 · 33,61 m²</li>
+          <li>Piscina privativa</li>
+          <li>Sinal R$ 58.490</li>
+          <li>39× R$ 2.999/mês na obra</li>
+          <li>6 intercaladas R$ 9.748</li>
+          <li>Entrega 2º sem. 2028</li>
+        </ul>
+      </div>
+
+      <div class="plan-arrow">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </div>
+
+      <!-- PILAR 2 -->
+      <div class="plan-pillar" style="border-color:rgba(197,160,85,.3);background:rgba(197,160,85,.04);">
+        <div class="plan-pillar-num" style="color:rgba(197,160,85,.7);">02</div>
+        <div class="plan-pillar-ico" style="background:rgba(197,160,85,.15);border-color:rgba(197,160,85,.4);">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+          </svg>
+        </div>
+        <div class="plan-pillar-title">Consórcio</div>
+        <div class="plan-pillar-val">R$ 340.000</div>
+        <ul class="plan-pillar-bullets">
+          <li>1 cota imobiliária</li>
+          <li>R$ 1.582,50/mês</li>
+          <li>Sem juros</li>
+          <li>Contemplação: sorteio ou lance</li>
+          <li>Carta cobre saldo das chaves</li>
+          <li>CDI permanece intacto</li>
+        </ul>
+      </div>
+
+      <div class="plan-arrow">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </div>
+
+      <!-- PILAR 3 -->
+      <div class="plan-pillar">
+        <div class="plan-pillar-num">03</div>
+        <div class="plan-pillar-ico">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z"/>
+          </svg>
+        </div>
+        <div class="plan-pillar-title">Capital em CDI</div>
+        <div class="plan-pillar-val">~R$ 400.000</div>
+        <ul class="plan-pillar-bullets">
+          <li>Permanece 100% líquido</li>
+          <li>Rende ~11% a.a.</li>
+          <li>~R$ 3.667/mês bruto indicativo</li>
+          <li>Paga parcelas do consórcio</li>
+          <li>Reserva para lances</li>
+          <li>Garante opcionalidade</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="plan-cdi-note rv" style="margin-top:2.5rem;">
+      <div class="plan-cdi-note-ico">
+        <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/>
+        </svg>
+      </div>
+      <div class="plan-cdi-note-txt">
+        <strong>A lógica central:</strong> o CDI financia o consórcio e preserva caixa para lances. O imóvel é adquirido na planta. O capital nunca se esgota — apenas trabalha em camadas.
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="divider"></div>
 
 <!-- ══ §3 RACIONAL ══ -->
@@ -418,12 +540,12 @@ footer p{font-size:.7rem;color:rgba(245,241,235,.22);line-height:1.7;max-width:6
   <div class="eyebrow rv"><span class="lbl">02 · Racional Estratégico</span></div>
   <h2 class="h2 rv">Por que faz sentido investir no Brasil <em>vivendo fora?</em></h2>
   <div class="rat-grid">
-    <div class="rat-card rv"><div class="rat-n">01</div><div class="rat-title">Diversificação Geográfica Real</div><p class="rat-body">Patrimônio concentrado em um único país é risco silencioso. Ativo no Brasil compõe portfólio genuinamente diversificado em contexto de vida internacional.</p></div>
-    <div class="rat-card rv d1"><div class="rat-n">02</div><div class="rat-title">Preservação de Liquidez</div><p class="rat-body">Consórcio + financiamento evitam mobilização integral do capital. Os R$ 400.000 em CDI continuam rendendo. Patrimônio não é sinônimo de descapitalização.</p></div>
-    <div class="rat-card rv d2"><div class="rat-n">03</div><div class="rat-title">Ativo Real com Renda</div><p class="rat-body">Destino turístico consolidado no Nordeste com demanda de short stay robusta. Exposição a ativo real com potencial de renda independente de câmbio australiano.</p></div>
-    <div class="rat-card rv d3"><div class="rat-n">04</div><div class="rat-title">Uso Futuro &amp; Proteção</div><p class="rat-body">Base durante visitas ao Brasil, lazer para a família, ativo transferível aos filhos. Uma propriedade que cumpre múltiplos papéis ao longo do tempo.</p></div>
-    <div class="rat-card rv d4"><div class="rat-n">05</div><div class="rat-title">Opcionalidade Preservada</div><p class="rat-body">A estrutura mantém flexibilidade: vender valorizado, manter renda, usar pessoalmente ou transferir. Boas estruturas não eliminam opções — elas as criam.</p></div>
-    <div class="rat-card rv"><div class="rat-n">06</div><div class="rat-title">Coerência com a Vida Atual</div><p class="rat-body">Para um casal em transição internacional sem permanência definitiva, liquidez é segurança. Esta proposta respeita essa realidade — e constrói sobre ela.</p></div>
+    <div class="rat-card rv"><div class="rat-n">01</div><div class="rat-title">Diversificação Geográfica</div><p class="rat-body">Patrimônio em um único país é risco concentrado. Ativo no Brasil compõe portfólio diversificado para quem vive fora.</p></div>
+    <div class="rat-card rv d1"><div class="rat-n">02</div><div class="rat-title">Liquidez Preservada</div><p class="rat-body">Consórcio + financiamento evitam mobilizar o CDI integralmente. Capital continua rendendo durante a obra.</p></div>
+    <div class="rat-card rv d2"><div class="rat-n">03</div><div class="rat-title">Renda Real no Brasil</div><p class="rat-body">Short stay no Nordeste: ocupação 65–80%+, ADR R$ 420–520/noite. Renda independente de câmbio australiano.</p></div>
+    <div class="rat-card rv d3"><div class="rat-n">04</div><div class="rat-title">Uso Futuro &amp; Família</div><p class="rat-body">Base para visitas, lazer com os filhos, ativo herdável. Uma propriedade com múltiplos papéis ao longo do tempo.</p></div>
+    <div class="rat-card rv d4"><div class="rat-n">05</div><div class="rat-title">Opcionalidade</div><p class="rat-body">Vender valorizado, manter renda ou usar pessoalmente. A estrutura cria opções — não as elimina.</p></div>
+    <div class="rat-card rv"><div class="rat-n">06</div><div class="rat-title">Coerência Real</div><p class="rat-body">Família em transição internacional, sem permanência definitiva. Esta estrutura respeita essa realidade.</p></div>
   </div>
 </section>
 
@@ -891,10 +1013,10 @@ footer p{font-size:.7rem;color:rgba(245,241,235,.22);line-height:1.7;max-width:6
         <div class="eng-block"><div class="eng-line" style="background:var(--champagne);"></div><div><div class="eng-bl">Renda pós-entrega</div><div class="eng-bt">~R$ 5.500 a R$ 7.800/mês líquidos</div><div class="eng-bn">Short stay com gestora profissional. Projeção indicativa — depende de ocupação e sazonalidade.</div></div></div>
       </div>
       <div class="eng-pts rv d1">
-        <div class="eng-pt"><div class="eng-pt-t">CDI: o ativo que trabalha enquanto o imóvel é construído.</div><div class="eng-pt-b">Os R$ 400.000 a 11% a.a. geram ~R$ 44.000/ano bruto indicativo. Mobilizá-los integralmente significa abrir mão dessa produtividade por anos. A estrutura proposta mantém esse motor funcionando.</div></div>
-        <div class="eng-pt"><div class="eng-pt-t">Comprometimento mensal: racionalidade, não sacrifício.</div><div class="eng-pt-b">Imóvel (~R$ 2.999) + consórcio (R$ 1.582) = ~R$ 4.581/mês. Planejável e sustentável — comparável ao rendimento atual do imóvel no Brasil (R$ 4.500/mês). Sem descapitalizar o portfólio.</div></div>
-        <div class="eng-pt"><div class="eng-pt-t">Três pilares de patrimônio, não concentração.</div><div class="eng-pt-b">Imóvel residencial (~R$ 1M) + capital financeiro (~R$ 400k) + ativo turístico (~R$ 584k VGV). Classes e regiões distintas. Capital disponível para SP, SC e demais regiões do planejamento híbrido.</div></div>
-        <div class="eng-pt"><div class="eng-pt-t">2028: o ponto de inflexão.</div><div class="eng-pt-b">Na entrega, os filhos terão 11 e 7 anos. A família terá 46 e 53. O ativo estará valorizado, com renda potencial de mercado e financiamento estruturado — sem ter sacrificado liquidez.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">CDI trabalha enquanto o imóvel é construído.</div><div class="eng-pt-b">R$ 400k a 11% a.a. = ~R$ 44k/ano bruto. Mobilizá-los integralmente significa perder essa produtividade por anos.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">Comprometimento mensal controlado.</div><div class="eng-pt-b">Imóvel R$ 2.999 + consórcio R$ 1.582 = R$ 4.581/mês — equivalente ao rendimento atual do imóvel (R$ 4.500/mês).</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">Portfólio em três camadas.</div><div class="eng-pt-b">Imóvel residencial ~R$ 1M · capital financeiro ~R$ 400k · ativo turístico ~R$ 585k. Classes e regiões distintas.</div></div>
+        <div class="eng-pt"><div class="eng-pt-t">2028: a virada.</div><div class="eng-pt-b">Na entrega: filhos com 11 e 7 anos. Casal 46 e 53. Ativo pronto para gerar renda — sem ter sacrificado liquidez durante a obra.</div></div>
       </div>
     </div>
   </div>
